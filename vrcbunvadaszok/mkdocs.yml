@@ -1,0 +1,60 @@
+site_name: VRCBűnvadászok
+site_description: A VRCBűnvadászok közösségi dokumentációja
+site_url: https://docs.vrcbunvadaszok.hu
+
+theme:
+  name: material
+  language: hu
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep purple
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Kezdőlap: index.md
+  - Telepítés:
+      - Java: telepites/java.md
+      - Launcher választás: telepites/launcher.md
+      - Prism Launcher: telepites/prism.md
+      - Modrinth App: telepites/modrinth.md
+  - Csatlakozás: csatlakozas.md
+
+plugins:
+  - search:
+      lang: hu
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - def_list
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/MEGHIVO_LINK
+      name: Discord szerverünk
+
+extra_css:
+  - assets/extra.css
