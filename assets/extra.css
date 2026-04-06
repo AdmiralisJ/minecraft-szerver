@@ -1,0 +1,53 @@
+/* Fekete háttér finomhangolás */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0a0a0a;
+  --md-default-fg-color: #e0e0e0;
+  --md-primary-fg-color: #0a0a0a;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #9c27b0;
+}
+
+/* Oldal átmenet animáció */
+.md-content,
+.md-nav,
+.md-header {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.md-content__inner {
+  animation: fadeInUp 0.35s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigációs tab átmenet */
+.md-tabs__link {
+  transition: color 0.2s ease;
+}
+
+/* Kártya stílusú blokkok */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+}
+
+/* GIF képek kerekített sarokkal */
+.md-typeset img {
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Lépésszámok kiemelése */
+.md-typeset ol li::marker {
+  color: #9c27b0;
+  font-weight: bold;
+}
